@@ -1,0 +1,26 @@
+<h3 style="position: relative; left: 40%; top: 20px;">Dashboard!</h3>
+
+<!--<button type="button" (click)="getData()">Get Users</button> -->
+
+<div>
+    <table border="1">
+        <tr style="height: 40px;">
+            <th class="text-center">User ID</th>
+            <th class="text-center">First Name</th>
+            <th class="text-center">Last Name</th>
+            <th class="text-center">Phone</th>
+            <th class="text-center">Email</th>
+            <th class="text-center">Remove</th>
+            
+        </tr>
+        <tr *ngFor="let user of users; let i = index">
+            <td>{{user.userId}}</td>
+            <td>{{user.firstName}}</td>
+            <td>{{user.lastName}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.email}}</td>
+            <td><button type="button" (click)="delete(user.userId)">Remove</button></td>
+            
+        </tr>
+    </table>
+</div>
